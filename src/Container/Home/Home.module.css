@@ -1,0 +1,51 @@
+.homeClass {
+    margin: auto;
+    max-width: 550px;
+    padding-top: 20px;
+}
+
+.textCenter {
+    text-align: center;
+    font-weight: bold;
+}
+
+.tableClass{
+    width: 550px;
+    display: flex;
+    margin: 10px 0px;
+}
+
+.tableClassRow{
+    width: 550px;
+    display: flex;
+    padding: 5px;
+}
+
+.titleHeader{
+    width: 250px;
+    text-align: center;
+}
+
+.titleRow{
+    width: 250px;
+}
+
+.magnitudeHeader{
+    width: 100px;
+    text-align: center;
+}
+
+.magnitudeRow{
+    width: 100px;
+    text-align: center;
+}
+
+.timeHeader{
+    width: 200px;
+    text-align: center;
+}
+
+.timeRow{
+    width: 200px;
+    text-align: center;
+}
