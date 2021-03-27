@@ -7,14 +7,8 @@ service.headers = {
 
 service.getApiData = async () => {
     const res = await fetch('api.json', service.headers);
-    // .then(response => response.json())
-    // .then(data => {console.log(data);
-    //     return data;
-    // });
     const result = await res.json();
-    console.log(result);
-
-
+    return result;
 }
 
 export default service;
