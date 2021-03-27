@@ -1,0 +1,22 @@
+.headerClass{
+    padding:20px;
+    background-color: #ededed;
+    display: flex;
+    align-items: stretch;
+}
+
+.logoImg{
+    width: 50px;
+    cursor: pointer;
+}
+
+.title{
+    font-size: 36px;
+    color:#777777;
+    padding-top:10px;
+}
+
+.welcomeMsg{
+    padding-top: 20px;
+    padding-left: 20px;
+}
