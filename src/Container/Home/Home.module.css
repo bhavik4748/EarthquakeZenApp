@@ -9,43 +9,46 @@
     font-weight: bold;
 }
 
-.tableClass{
+.tableClass {
     width: 550px;
     display: flex;
     margin: 10px 0px;
 }
 
-.tableClassRow{
+.tableClassRow {
     width: 550px;
     display: flex;
     padding: 5px;
 }
 
-.titleHeader{
+.titleHeader {
     width: 250px;
     text-align: center;
+    cursor: pointer;
 }
 
-.titleRow{
+.titleRow {
     width: 250px;
 }
 
-.magnitudeHeader{
+.magnitudeHeader {
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.magnitudeRow {
     width: 100px;
     text-align: center;
 }
 
-.magnitudeRow{
-    width: 100px;
-    text-align: center;
-}
-
-.timeHeader{
+.timeHeader {
     width: 200px;
     text-align: center;
+    cursor: pointer;
 }
 
-.timeRow{
+.timeRow {
     width: 200px;
     text-align: center;
 }

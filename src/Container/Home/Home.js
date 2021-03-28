@@ -1,15 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom'
+
+import service from '../../services/service';
 import classes from './Home.module.css';
 
 const Home = ({ quakeData }) => {
     let dataRow = '';
+    const [data, setData] = useState([...quakeData.features]);
+    const [title, setTitle] = useState(false);
+    const [mag, setMag] = useState(false);
+    const [time, setTime] = useState(false);
+    const sortByColumn = (type) => {
+        switch (type) {
+            case 'place':
+                setData(service.sortData([...data], type, title));
+                setTitle(!title);
+                break;
+            case 'mag':
+                setData(service.sortData([...data], type, mag));
+                setMag(!mag);
+                break;
 
-    const sortByColumn = () => {
-
+            case 'time':
+                setData(service.sortData([...data], type, time));
+                setTime(!time);
+                break;
+        }
     }
 
-    dataRow = quakeData.features.map(row => {
+    dataRow = data.map(row => {
         let id = '/' + row['properties']['id'];
         return (
             <div key={row.properties.title} className={classes.tableClassRow}>
@@ -23,13 +42,11 @@ const Home = ({ quakeData }) => {
     return (
         <div className={classes.homeClass}>
             <div className={classes.textCenter} >{quakeData.metadata.title} </div>
-
             <div className={classes.tableClass}>
-                <div className={classes.titleHeader}>Title</div>
-                <div className={classes.magnitudeHeader}>Magnitude</div>
-                <div className={classes.timeHeader}>Time</div>
+                <div className={classes.titleHeader} onClick={() => sortByColumn('place')} >Title</div>
+                <div className={classes.magnitudeHeader} onClick={() => sortByColumn('mag')} >Magnitude</div>
+                <div className={classes.timeHeader} onClick={() => sortByColumn('time')}>Time</div>
             </div>
-
             {dataRow}
         </div>
     )
