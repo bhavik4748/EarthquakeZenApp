@@ -9,8 +9,9 @@ service.getApiData = async () => {
     const res = await fetch('api.json', service.headers);
     const result = await res.json();
     let { data } = result;
-    for (let obj of data.features) {
+    for (let [index,obj] of data.features.entries()) {
         obj['properties']['formattedTime'] = service.getDateTimeFromTime(obj['properties']['time']);
+        obj['properties']['id'] = index;
     }
     return result;
 }

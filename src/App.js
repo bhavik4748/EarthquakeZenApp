@@ -9,6 +9,7 @@ import service from './services/service';
 import Header from './Component/Header/Header';
 import Home from './Container/Home/Home';
 import Profile from './Container/Profile/Profile';
+import DetailView from './Container/DetailView/DetailView';
 
 function App() {
     const [site, setSite] = useState(null);
@@ -34,6 +35,11 @@ function App() {
                 </Route>
                 <Route path="/profile">
                     <Profile profileData={profile}></Profile>
+                </Route>
+                <Route path="/:id" children={<DetailView quakeData={data} />}>
+                </Route>
+                <Route path="*">
+                    <Home quakeData={data}></Home>
                 </Route>
             </Switch>
         </>)

@@ -1,12 +1,19 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom'
 import classes from './Home.module.css';
 
 const Home = ({ quakeData }) => {
     let dataRow = '';
+
+    const sortByColumn = () => {
+
+    }
+
     dataRow = quakeData.features.map(row => {
+        let id = '/' + row['properties']['id'];
         return (
             <div key={row.properties.title} className={classes.tableClassRow}>
-                <div className={classes.titleRow}>{row.properties.place}</div>
+                <NavLink key={id} className={classes.titleRow} to={id}> {row.properties.place}</NavLink>
                 <div className={classes.magnitudeRow}>{row.properties.mag}</div>
                 <div className={classes.timeRow}>{row.properties.formattedTime}</div>
             </div>

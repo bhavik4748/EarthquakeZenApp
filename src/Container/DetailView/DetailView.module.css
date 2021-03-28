@@ -1,0 +1,27 @@
+.detailViewClass {
+    margin: auto;
+    max-width: 350px;
+    padding-top: 20px;
+}
+
+.textCenter {
+    text-align: left;
+    font-weight: bold;
+    margin: 10px 0px;
+    font-size: 14px;
+}
+
+.flexContainer {
+    display: flex;
+    margin: 5px 0px ;
+}
+
+.label {
+    width: 100px;
+    font-weight: bold;
+}
+
+.propertyValue {
+    width: 250px;
+    color: #777777;
+}
