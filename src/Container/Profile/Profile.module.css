@@ -19,13 +19,13 @@
     text-align: center;
 }
 
-img {
+.img {
     width: 100px;
-    margin-left: 190px;
 }
 
 .profileImg {
     width: 300px;
+    text-align: right;
 }
 
 .divClass {
@@ -36,8 +36,8 @@ img {
     vertical-align: top;
 }
 
-.profileValue{
-    color:#444444;
+.profileValue {
+    color: #444444;
     width: 100%;
     max-width: 200px;
 }

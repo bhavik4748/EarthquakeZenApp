@@ -6,7 +6,7 @@ const Profile = ({ profileData }) => {
         <div className={(classes.profileClass)}>
             <div className={classes.textCenter}> Profile</div>
             <div className={classes.flexContainer}>
-                <div className={classes.profileImg}><img src={profileData.avatarImage}></img></div>
+                <div className={classes.profileImg}><img className={classes.img} src={profileData.avatarImage}></img></div>
                 <div >
                     <div>
                         <div className={classes.divClass}>FirstName</div>

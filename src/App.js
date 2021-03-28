@@ -10,6 +10,7 @@ import Header from './Component/Header/Header';
 import Home from './Container/Home/Home';
 import Profile from './Container/Profile/Profile';
 import DetailView from './Container/DetailView/DetailView';
+import classes from './App.css';
 
 function App() {
     const [site, setSite] = useState(null);
