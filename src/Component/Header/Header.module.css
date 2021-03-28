@@ -3,6 +3,7 @@
     background-color: #ededed;
     display: flex;
     align-items: stretch;
+    width: 100%;
 }
 
 .logoImg{
@@ -19,4 +20,5 @@
 .welcomeMsg{
     padding-top: 20px;
     padding-left: 20px;
+    text-align: right;
 }
