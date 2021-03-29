@@ -1,3 +1,6 @@
+# Deployed Project Link on Firebase :
+https://earthquakezenapp.web.app/
+
 # Getting Started with React app without using Create-React-App
 npm install
 
