@@ -42,12 +42,14 @@ const Home = ({ quakeData }) => {
     return (
         <div className={classes.homeClass}>
             <div className={classes.textCenter} >{quakeData.metadata.title} </div>
-            <div className={classes.tableClass}>
-                <div className={classes.titleHeader} onClick={() => sortByColumn('place')} >Title</div>
-                <div className={classes.magnitudeHeader} onClick={() => sortByColumn('mag')} >Magnitude</div>
-                <div className={classes.timeHeader} onClick={() => sortByColumn('time')}>Time</div>
+            <div className={classes.autoScroll}>
+                <div className={classes.tableClass}>
+                    <div className={classes.titleHeader} onClick={() => sortByColumn('place')} >Title</div>
+                    <div className={classes.magnitudeHeader} onClick={() => sortByColumn('mag')} >Magnitude</div>
+                    <div className={classes.timeHeader} onClick={() => sortByColumn('time')}>Time</div>
+                </div>
+                {dataRow}
             </div>
-            {dataRow}
         </div>
     )
 
