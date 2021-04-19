@@ -36,16 +36,16 @@ service.sortData = (arr, sortBy, flag) => {
         case 'place':
             if (flag) {
                 tempArr.sort((b, a) => {
-                    var textA = a[sortBy].toUpperCase();
-                    var textB = b[sortBy].toUpperCase();
+                    const textA = a[sortBy].toUpperCase();
+                    const textB = b[sortBy].toUpperCase();
                     return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
                 });
             }
 
             else {
                 tempArr.sort((a, b) => {
-                    var textA = a[sortBy].toUpperCase();
-                    var textB = b[sortBy].toUpperCase();
+                    const textA = a[sortBy].toUpperCase();
+                    const textB = b[sortBy].toUpperCase();
                     return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
                 });
             }
